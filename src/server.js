@@ -43,9 +43,11 @@ app.use((req, res, next) => {
 });
 
 //Routes
-/*app.use(require("./routes/index_routes"));
-app.use(require("./routes/usuarios_routes"));
-app.use(require("./routes/comunidades_routes"));*/
+const routesCalifs = require("./routes/routesCalificaciones");
+const routesCarreras = require("./routes/routesCarrera");
+
+app.use("/calificaciones", routesCalifs);
+app.use("/carreras", routesCarreras);
 
 //Static files
 app.use(express.static(path.join(__dirname, "public")));
