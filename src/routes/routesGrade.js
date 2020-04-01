@@ -2,9 +2,9 @@ const { Router } = require("express");
 const router = Router();
 
 const {
-    recordMark
-} = require("../controllers/controllerMark");
+    recordGrade
+} = require("../controllers/controllerGrade");
 
-router.get('/', recordMark);
+router.get('/', recordGrade);
 
 module.exports = router;
