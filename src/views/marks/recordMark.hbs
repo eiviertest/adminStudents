@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="card col-md-5 p-2 m-2">
+        <label class="lead">Carrera</label>
+        <div class="group-form">
+            <select name="comunidad" class="form-control">
+                <option value="Hola">Hola</option>
+            </select>
+        </div>
+        <label class="lead">Estudiante</label>
+        <div class="group-form">
+            <select name="comunidad" class="form-control">
+                <option value="Hola">Hola</option>
+            </select>
+        </div>
+        <label class="lead">Asginatura</label>
+        <div class="group-form">
+            <select name="comunidad" class="form-control">
+                <option value="Hola">Hola</option>
+            </select>
+        </div>
+    </div>
+    <div class="card col-md-6 p-2 m-2">
+        <div class="table-responsive">
+            <table class="table table-dark mx-auto">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="lead">Registrar calificación</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each comunidades}}
+                    <tr>
+                        <td>{{comunidad}}</td>
+                        <td>
+                            <a href="/comunidades/editar/{{_id}}"><i class="fa fa-pencil fa-lg"></i></a>
+                            <a href="/comunidades/eliminar/{{_id}}"><i class="fas fa-trash fa-lg"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -43,11 +43,11 @@ app.use((req, res, next) => {
 });
 
 //Routes
-const routesCalifs = require("./routes/routesCalificaciones");
-const routesCarreras = require("./routes/routesCarrera");
+const routesCalifs = require("./routes/routesMarks");
+const routesCarreras = require("./routes/routesCareer");
 
-app.use("/calificaciones", routesCalifs);
-app.use("/carreras", routesCarreras);
+app.use("/marks", routesCalifs);
+app.use("/careers", routesCarreras);
 
 //Static files
 app.use(express.static(path.join(__dirname, "public")));
