@@ -11,20 +11,24 @@
                     <input type="text" name="name" class="form-control" placeholder="Career's name" autofocus value="{{subject.name}}">
                 </div>
                 <label class="lead">Grade</label>
+                <label class="lead">Grade</label>
                 <div class="form-group">
-                <select name="grade" class="form-control">
-                    {{#times 6}}
-                        <option value="{{this}}">{{this}}</option>
-                    {{/times}}
-                </select>
+                    <select name="grade" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
                 </div>
                 <label class="lead">Career</label>
                 <div class="form-group">
-                <select name="careerKey" class="form-control">
-                    {{#each careers}}
-                        <option value="{{_id}}">{{name}}</option>
-                    {{/each}}
-                </select>
+                    <select name="careerKey" class="form-control">
+                        {{#each careers}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">Save</button>
