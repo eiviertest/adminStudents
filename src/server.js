@@ -46,10 +46,12 @@ app.use((req, res, next) => {
 const routesGrade = require("./routes/routesGrade");
 const routesCareer = require("./routes/routesCareer");
 const routesStudent = require("./routes/routesStudent");
+const routesSubject = require("./routes/routesSubject");
 
 app.use("/grades", routesGrade);
 app.use("/careers", routesCareer);
-app.use("/students", routesCareer);
+app.use("/students", routesStudent);
+app.use("/subjects", routesSubject);
 
 //Static files
 app.use(express.static(path.join(__dirname, "public")));

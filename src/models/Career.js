@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 
-const CarreraSchema = new Schema(
+const CareerSchema = new Schema(
   {
-    carrera: { type: String, required: true }
+    name: String,
   },
   { timestamps: true }
 );
 
-module.exports = model("Carrera", CarreraSchema);
+module.exports = model("Career", CareerSchema);
