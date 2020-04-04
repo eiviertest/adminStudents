@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
-const MONGODB_URI = `mongodb+srv://kapxyale:alex45eivier@herramientas-tdenp.mongodb.net/test?retryWrites=true&w=majority`;
+//Configuration of params to connection
+const { MongoAtlasConnection } = process.env;
+const MONGODB_URI = `mongodb+srv://${MongoAtlasConnection}`;
 
+//Connection to MongoAtlas
 mongoose
   .connect(MONGODB_URI, {
     useUnifiedTopology: true,
