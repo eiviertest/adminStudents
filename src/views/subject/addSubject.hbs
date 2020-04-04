@@ -1,3 +1,4 @@
+{{#if careers}}
 <div class="col-md-6 mx-auto">
     <div class="card">
         <div class="card-header">
@@ -11,18 +12,11 @@
                 </div>
                 <label class="lead">Grade</label>
                 <div class="form-group">
-                    <select name="grade" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
+                    <input type="number" name="grade" class="form-control" max="6" min="1" placeholder="Grade" pattern="Only numbers">
                 </div>
                 <label class="lead">Career</label>
                 <div class="form-group">
-                    <select name="careerKey" class="form-control">
+                    <select name="careerID" class="form-control">
                         {{#each careers}}
                             <option value="{{_id}}">{{name}}</option>
                         {{/each}}
@@ -35,3 +29,14 @@
         </div>
     </div>
 </div>
+{{else}}
+<div class="row">
+    <div class="card mx-auto">
+        <div class="card-body">
+            <h1>Excuse me!</h1>
+            <p class="lead">There are no careers registered yet</p>
+            <a href="/careers/add" class="btn btn-success btn-block">Add one</a>
+        </div>
+    </div>
+</div>
+{{/if}}

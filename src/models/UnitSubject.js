@@ -1,14 +1,14 @@
 const { Schema, model } = require("mongoose");
 
-const UnidadAsignaturaSchema = new Schema(
+const UnitSubjectSchema = new Schema(
   {
-    ClaveAsignatura: String,
-    NumUnidad: Number,
-    NombreUnidad: String,
-    HorasUnidad: Number,
-    HorasSemana: Number,
+    subjectID: String,
+    noUnit: Number,
+    nameUnit: String,
+    hoursUnit: Number,
+    hoursWeek: Number,
   },
   { timestamps: true }
 );
 
-module.exports = model("UnidadAsignatura", UnidadAsignaturaSchema);
+module.exports = model("UnitSubject", UnitSubjectSchema);

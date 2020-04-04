@@ -1,12 +1,12 @@
 const { Schema, model } = require("mongoose");
 
-const AsignaturaSchema = new Schema(
+const SubjectSchema = new Schema(
   {
     name: String,
     grade: Number,
-    careerKey: String,
+    careerID: String,
   },
   { timestamps: true }
 );
 
-module.exports = model("Asignatura", AsignaturaSchema);
+module.exports = model("Subject", SubjectSchema);

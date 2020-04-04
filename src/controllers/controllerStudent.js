@@ -33,7 +33,7 @@ ctrlStudent.saveStudent = async (req, res) => {
     number,
     email,
     currentGrade,
-    careerKey,
+    careerID,
   } = req.body;
   console.log(req.body);
   //Create the object with module mongoose
@@ -45,7 +45,7 @@ ctrlStudent.saveStudent = async (req, res) => {
     contact: { number },
     email,
     currentGrade,
-    careerKey,
+    careerID,
   });
   //Save object created
   await saveStudentDB.save();

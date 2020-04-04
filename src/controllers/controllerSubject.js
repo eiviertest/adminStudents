@@ -21,13 +21,13 @@ ctrlSubject.addSubject = async (req, res) => {
 //Save a subject in DB
 ctrlSubject.saveSubject = async (req, res) => {
   //Destructuring from request
-  const { name, grade, careerKey } = req.body;
+  const { name, grade, careerID } = req.body;
   console.log(req.body);
   //Create the object with module mongoose
   const saveSubjectDB = new Subject({
     name,
     grade,
-    careerKey,
+    careerID,
   });
   console.log(saveSubjectDB);
   //Save object created
@@ -45,8 +45,8 @@ ctrlSubject.updateSubject = async (req, res) => {
 
 //Update a career
 ctrlSubject.updateSubjectDB = async (req, res) => {
-  const { name, grade, careerKey } = req.body;
-  await Subject.findByIdAndUpdate(req.params.id, { name, grade, careerKey });
+  const { name, grade, careerID } = req.body;
+  await Subject.findByIdAndUpdate(req.params.id, { name, grade, careerID });
   res.redirect("/subjects");
 };
 

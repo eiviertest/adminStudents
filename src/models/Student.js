@@ -15,7 +15,7 @@ const StudentSchema = new Schema(
     contact: [{ number: Number }],
     email: String,
     currentGrade: Number,
-    careerKey: String,
+    careerID: String,
   },
   { timestamps: true }
 );

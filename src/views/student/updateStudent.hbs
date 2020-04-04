@@ -51,7 +51,7 @@
                             <span class="input-group-text">Grade and Career</span>
                         </div>
                         <input type="number" name="currentGrade" value="{{student.currentGrade}}" disabled="true" class="form-control" placeholder="Current Grade" required="true" pattern="[0-9]{1,1}" title="Only number">
-                        <select name="careerKey" class="form-control" disabled="true">
+                        <select name="careerID" class="form-control" disabled="true">
                             {{#each careers}}
                                 <option value="{{_id}}">{{name}}</option>
                             {{/each}}
